@@ -22,11 +22,18 @@ else
 	require(script.Net).Client.Start()
 end
 
+local Event = require(script.Event)
+local Function = require(script.Function)
 local SharedEvents = require(script.SharedEvent)
 
+export type Event<T...> = Event.Event<T...>
+export type Function<T...> = Function.Function<T...>
+export type SharedCallEvent<T...> = SharedEvents.SharedCallEvent<T...>
+export type SharedSignalEvent<T...> = SharedEvents.SharedSignalEvent<T...>
+
 return {
-	Event = require(script.Event),
-	Function = require(script.Function),
+	Event = Event,
+	Function = Function,
 	SharedEvent = SharedEvents.SharedCallEvent,
 	SharedSignalEvent = SharedEvents.SharedSignalEvent,
 }
