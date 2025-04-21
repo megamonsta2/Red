@@ -27,7 +27,7 @@ local Function = require(script.Function)
 local SharedEvents = require(script.SharedEvent)
 
 export type Event<T...> = Event.Event<T...>
-export type Function<T...> = Function.Function<T...>
+export type Function<T..., R...> = Function.Function<T..., R...>
 export type SharedCallEvent<T...> = SharedEvents.SharedCallEvent<T...>
 export type SharedSignalEvent<T...> = SharedEvents.SharedSignalEvent<T...>
 
